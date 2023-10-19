@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Display Data";
+    string[] TableHeaders = new string[] {"Id"
+      ,"Origin Value"
+      ,"Short Value"};
+}
+
+<div class="table">
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+                @{
+                    foreach (var head in TableHeaders)
+                    {
+                        <th>
+                        @head
+                        </th>
+                    }
+                }
+        </tr>
+    </thead>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    <tbody>
+
+    </tbody>
+</table>
+</div>

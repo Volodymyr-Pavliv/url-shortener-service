@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model url_shortener_service.Areas.Identity.Data.Url
+
+
+<title>short link</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+<style>
+	
+
+	.container {
+		width: 50%;
+		margin-top: 120px;
+	}
+
+	.capatcha-skip {
+		background: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		border-top: 5px solid #3498DB;
+	}
+</style>
+
+<body>
+	<form asp-action="ShortUrl">
+		<div class="container text-center">
+			<h1>Hello, world!</h1>
+			<br/>
+			<div class="input-group">
+				<input asp-for="OriginValue" class="form-control rounded-0" placeholder="http://example.com/example" style="padding:12px" />
+				<span class="input-group-btn" style="width:15%">
+					<input type="submit" value="submit" class="btn btn-primary form-control rounded-0">
+				</span>
+			</div>
+			<div id="data_place" style="margin-top:15px;"> </div>
+		</div>
+	</form>
+</body>
